@@ -1,0 +1,6 @@
+%branding_variants @BRANDING_VARIANTS@
+
+%branding_add_conflicts() %{expand:%%global __branding_name %%(for A in %%branding_variants; do if [ "%%1" = "$A" ]; then echo "$A"; break; fi; done)} \
+%{expand:%%{expand:%%([ -z "%%__branding_name" ] || echo "%%%%global __branding_in_list 1")}} \
+%{!?__branding_in_list:%{error:branding %1 is not in variants list, please add it to rpm-macros-branding package}} \
+%{?__branding_in_list:Conflicts: %(for n in %branding_variants ; do [ "$n" = "%__branding_name" ] || echo -n "branding-$n-%2 "; done)}
