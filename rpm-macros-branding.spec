@@ -1,5 +1,5 @@
 Name: rpm-macros-branding
-Version: 1.0.1
+Version: 1.0.2
 Release: alt1
 Summary: RPM helper macros to build branding packages
 License: %gpl2plus
@@ -17,6 +17,11 @@ cp %SOURCE0 branding.rpm.macros
 
 VARIANTS="\
 Platform6-server-light \
+alt-desktop \
+alt-education \
+alt-server \
+alt-starterkit \
+alt-workstation \
 altlinux-backup-server \
 altlinux-centaurus \
 altlinux-desktop \
@@ -26,11 +31,16 @@ altlinux-lite \
 altlinux-lxdesktop \
 altlinux-office-desktop \
 altlinux-office-server \
+altlinux-p7 \
 altlinux-school-server \
 altlinux-sisyphus \
 altlinux-spt \
+altlinux-starterkit \
 altlinux-tablet \
 altlinux-workbench \
+basealt-server \
+basealt-starterkit \
+basealt-workstation \
 informika-schoolmaster \
 ivk-chainmail \
 lxde-desktop \
@@ -55,6 +65,9 @@ install -m 0644 branding.rpm.macros %buildroot%_rpmmacrosdir/branding
 %_rpmmacrosdir/*
 
 %changelog
+* Wed Aug 31 2016 Gleb F-Malinovskiy <glebfm@altlinux.org> 1.0.2-alt1
+- Added 10 more brandings.
+
 * Tue Aug 30 2016 Gleb F-Malinovskiy <glebfm@altlinux.org> 1.0.1-alt1
 - Added xalt-kworkstation.
 
