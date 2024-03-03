@@ -47,6 +47,7 @@ altlinux-workbench \
 basealt-server \
 basealt-starterkit \
 basealt-workstation \
+basko \
 informika-schoolmaster \
 ivk-chainmail \
 lxde-desktop \
